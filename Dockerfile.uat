@@ -1,0 +1,7 @@
+FROM golang:1.18-alpine
+
+WORKDIR /usr/src/app
+RUN go mod init example/hello
+
+COPY . .
+ENTRYPOINT [ "go", "run", "." ]
